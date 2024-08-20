@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: mkdir $HOME/special-nproc
-    - run: printf "#!/bin/sh\necho 1" > $HOME/special-nproc/nproc
-    - run: chmod +x $HOME/special-nproc/nproc
-    - run: PATH=$HOME/special-nproc:$PATH ./diy.sh build cmake
+    # - run: mkdir $HOME/special-nproc
+    # - run: printf "#!/bin/sh\necho 1" > $HOME/special-nproc/nproc
+    # - run: chmod +x $HOME/special-nproc/nproc
+    - run: ./diy.sh build cmake
 
