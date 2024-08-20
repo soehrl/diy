@@ -14,6 +14,6 @@ package_build()
     cd cmake-3.30.2
 
     ./configure --prefix=$SHELF_DIR #--parallel=$(nproc --all)
-    make -j
+    make
     make install
 }
