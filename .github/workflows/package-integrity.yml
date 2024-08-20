@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: ./diy.sh build libevent
 
-  ncurses:
+  tmux:
     needs: [ncurses, libevent]
     runs-on: ubuntu-latest
     steps:
