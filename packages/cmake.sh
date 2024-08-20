@@ -13,7 +13,7 @@ package_build()
     tar xvzf cmake-3.30.2.tar.gz
     cd cmake-3.30.2
 
-    ./configure --prefix=$SHELF_DIR --parallel=$(nproc --all)
-    make -j
+    ./configure --prefix=$SHELF_DIR #--parallel=$(nproc --all)
+    make
     make install
 }

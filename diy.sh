@@ -68,7 +68,7 @@ build()
     PACKAGE_NAME=$1
     PACKAGE_SCRIPT="${ROOT_DIR}/packages/$PACKAGE_NAME.sh"
     if [ -f "$PACKAGE_SCRIPT" ]; then
-        source $PACKAGE_SCRIPT
+        . $PACKAGE_SCRIPT
         echo "Installing '${PACKAGE_NAME}'@v$(package_version)"
 
         SHELF_DIR="$HOME/.diy/shelf/${PACKAGE_NAME}"

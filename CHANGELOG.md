@@ -18,3 +18,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - tmux v3.4
 - Readme
 - Changelog
+- Install script

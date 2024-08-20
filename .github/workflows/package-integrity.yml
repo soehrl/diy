@@ -1,0 +1,41 @@
+name: package-integrity
+
+on:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  ncurses:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: ./diy.sh build ncurses
+
+  libevent:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: ./diy.sh build libevent
+
+  tmux:
+    needs: [ncurses, libevent]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: ./diy.sh build ncurses
+    - run: ./diy.sh build libevent
+    - run: ./diy.sh build tmux
+
+  cmake:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    # - run: mkdir $HOME/special-nproc
+    # - run: printf "#!/bin/sh\necho 1" > $HOME/special-nproc/nproc
+    # - run: chmod +x $HOME/special-nproc/nproc
+    - run: ./diy.sh build cmake
+

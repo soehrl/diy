@@ -1,0 +1,17 @@
+name: package-integrity
+
+on:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  install-script:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: ./install.sh
+    - run: which diy
