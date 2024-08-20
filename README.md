@@ -11,7 +11,7 @@ Currently, there is no automatic dependency resolution, i.e., you have to instal
 Generally, it is a more *hands-on* appraoch to managing packages.
 
 ## Installation
-Generally, you can just clone this repository and you are good to go.
+Just clone the repository to `$HOME/.diy` and you are good to go.
 However, you might want to create a symlink to `diy.sh` to simply its usage.
 In order to access installed binaries and libraries, you should prefix your `$PATH` variable with `$HOME/.local/bin` and your `$LD_LIBRARY_PATH` varaible with `$HOME/.local/lib`.
 
