@@ -43,5 +43,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - run: ./diy.sh build gettext
+
+  neovim:
+    needs: [gettext]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: ./diy.sh build gettext
     - run: ./diy.sh build neovim
     - run: nvim --version
