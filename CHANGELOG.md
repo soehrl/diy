@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - ncurses v6.5 (dependency of tmux)
 - libevent v2.1.12 (dependency of tmux)
 - tmux v3.4
+- gettext v0.22.5 (dependency of neovim)
+- neovim v0.10.1
 - Readme
 - Changelog
 - Install script
