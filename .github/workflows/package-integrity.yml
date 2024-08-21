@@ -39,7 +39,7 @@ jobs:
     # - run: chmod +x $HOME/special-nproc/nproc
     - run: ./diy.sh build cmake
 
-  neovim:
+  gettext:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
